@@ -1,17 +1,28 @@
 var weather = require("./weather.js");
 var location = require("./location.js");
 
+var argv = require("yargs")
+  .option("location", {
+    alias: "l",
+    demand: false,
+    describe: "Location to fetch weather",
+    type: "string"
+  })
+  .help("help")
+  .argv;
 
-weather(function (currentWeather) {
-  console.log(currentWeather);
-});
-
-location(function (location) {
-  if(!location) {
-    console.log("Unable to find location...");
-    return;
-  }
-
-  console.log("City: " + location.city);
-  console.log("Log/Lat: " + location.loc);
-});
+if (typeof argv.l === "string" && argv.l.length >0){
+  weather(argv.l, function (currentWeather) {
+    console.log(currentWeather);
+  });
+} else {
+  location(function (location) {
+    if (location) {
+      weather(location.city, function (currentWeather) {
+        console.log(currentWeather);
+      });
+    } else {
+      console.log("Unable to guess location based on your IP address");
+    }
+  });
+}
