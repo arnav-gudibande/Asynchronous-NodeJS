@@ -1,4 +1,23 @@
 # Weather-js
+
 Node.js weather app
 
-Uses ipinfo and openweathermap to infer the users location and display the current weather
+This app fetches the weather of your current location
+It uses the ipinfo.io API and the openweathermap API to determine your location and get weather respectively
+
+### Usage
+
+Navigate into the folder where you have downloaded this file.
+
+Then start the program:
+
+```javascript
+  npm start
+```
+
+If the app is not able to detect your location, then you will have to enter it manually:
+
+```javascript
+  node app.js -l "Your location (eg. Boston)"
+```
+
