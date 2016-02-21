@@ -4,7 +4,7 @@ Node.js weather app
 
 This app fetches the weather of your current location.
 
-It uses the ipinfo.io API and the OpenWeatherMap API to determine your location and get current weather.
+It uses the ipinfo.io and the OpenWeatherMap API to determine your location and get current weather.
 
 ### Usage
 
