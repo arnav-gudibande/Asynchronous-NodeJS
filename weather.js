@@ -8,7 +8,7 @@ module.exports = function (location) {
     if(!location) {
       return reject("No Location provided")
     }
-    
+  
     request({
       url: url,
       json: true
