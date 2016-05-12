@@ -1,0 +1,6 @@
+{
+  "name": "Weather-js",
+  "tagline": "Node.js weather app",
+  "body": "# Weather-js\r\n\r\nNode.js weather app\r\n\r\nThis app fetches the weather of your current location.\r\n\r\nIt uses the ipinfo.io and the OpenWeatherMap API to determine your location and get current weather.\r\n\r\n### Usage\r\n\r\nNavigate into the folder where you have downloaded this file.\r\n\r\nThen start the program:\r\n\r\n```javascript\r\n  npm start\r\n```\r\n\r\nIf the app is not able to detect your location, you will have to enter it manually:\r\n\r\n```javascript\r\n  node app.js -l \"Your location (eg. Boston)\"\r\n```\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
